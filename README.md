@@ -15,3 +15,5 @@ A repo to collect my Cloud Computing knowledge as much as possible.
     - [Virtualization Explained](https://www.youtube.com/watch?v=FZR0rG3HKIk) (with type 1/native/bare metal and type 2/hosted Hypervisors)
 
 - [AWS Basics for Beginners](https://www.youtube.com/watch?v=ulprqHHWlng)
+
+- [My AWS notes](aws.md)
