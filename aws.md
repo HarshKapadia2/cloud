@@ -27,7 +27,11 @@
 
 - Prerequisite: CIDR
   - [IPv4, CIDR, NAT and VPC subnets](https://www.youtube.com/watch?v=z07HTSzzp3o)
+
+    <img src="https://user-images.githubusercontent.com/50140864/116966289-6fdd9d80-accd-11eb-9abf-e98c0d834c60.png" width="50%" />
+  
   - [Understanding CIDR Ranges and dividing networks](https://www.youtube.com/watch?v=MmA0-978fSk)
+  - [IP Subnetting from CIDR Notations](https://www.youtube.com/watch?v=POPoAjWFkGg)
 - VPC = Virtual Private Cloud
 - Logically isolated portion of the AWS cloud within a region.
 
@@ -39,5 +43,5 @@
 
 - Services in the public subnet get a public IP address and can directly access the internet gateway. Direct access is not possible with private subnets.
 - Default no. of subnets = no. of AZs in a region
-- Tenency is multi-tenancy (default/shared) and the pricing is more for a dedicated space.
+- Tenancy is multi-tenancy (default/shared) and the pricing is more for a dedicated space.
 - [Amazon VPC](https://aws.amazon.com/vpc/)
