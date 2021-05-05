@@ -11,6 +11,7 @@
 
 - [AWS pricing](https://aws.amazon.com/pricing/)
 - [AWS pricing calculator](https://calculator.aws/)
+- Billing alarm uses Amazon CloudWatch and Amazon SNS.
 
 ## AWS IAM
 
@@ -69,3 +70,48 @@
   <img src="https://user-images.githubusercontent.com/50140864/117055430-c502c900-ad38-11eb-88da-50feae59607d.png" width="60%" />
 
 - [Amazon VPC](https://aws.amazon.com/vpc/)
+
+## Amazon EC2
+
+- EC2 = Elastic Compute Cloud
+- Allows running virtualized servers on AWS.
+
+<img src="https://user-images.githubusercontent.com/50140864/117099710-82201000-ad8f-11eb-94e0-3bfd283d3ca9.png" width="50%" />
+
+- EC2 instances in a public subnet can get a public IP address. They always have a private IP address.
+
+  <img src="https://user-images.githubusercontent.com/50140864/117099876-f490f000-ad8f-11eb-8af5-ea102e621d00.png" width="50%" />
+
+  - Instances within a public subnet
+
+    <img src="https://user-images.githubusercontent.com/50140864/117100160-ac260200-ad90-11eb-865d-65574025092b.png" width="50%" />
+
+  - Instances within a private subnet
+
+    <img src="https://user-images.githubusercontent.com/50140864/117100257-eb545300-ad90-11eb-9e3b-e785a8d539cd.png" width="50%" />
+
+- EC2 instance types
+
+  <img src="https://user-images.githubusercontent.com/50140864/117100931-ac270180-ad92-11eb-89e8-f971879eca3f.png" width="50%" />
+
+- Amazon Machine Images (AMIs)
+  - [Virtualization types: HVM vs PV](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/virtualization_types.html)
+
+- Connecting to an EC2 instance [from Windows 10 using SSH](https://www.nabh.com/blog/connecting-to-ec2-from-windows-10.html).
+
+### Connecting different AWS services to each other
+
+- Key pairs (access keys)
+- IAM roles
+
+  <img src="https://user-images.githubusercontent.com/50140864/117161923-f4b8dc00-addf-11eb-81eb-8ac9ea6e7c18.png" width="50%" />
+
+### Amazon EC2 Auto Scaling
+
+- Provides resilience, fault tolerance, availability, cost management and elasticity.
+- Minimum capacity <= desired capacity <= maximum capacity
+- Adding instances is called 'scaling out' and removing instances is called 'scaling in'.
+
+<img src="https://user-images.githubusercontent.com/50140864/117202390-60fd0500-ae0b-11eb-807c-409c70c95f38.png" width="50%" />
+
+<img src="https://user-images.githubusercontent.com/50140864/117202589-9efa2900-ae0b-11eb-8fac-f5662e85e012.png" width="50%" />
