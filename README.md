@@ -16,4 +16,6 @@ A repo to collect my Cloud Computing knowledge as much as possible.
 
 - [AWS Basics for Beginners](https://www.youtube.com/watch?v=ulprqHHWlng)
 
+- [The Most Important AWS Core Services](https://www.youtube.com/watch?v=B08iQQhXG1Y)
+
 - [My AWS notes](aws.md)
