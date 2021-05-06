@@ -19,3 +19,7 @@ A repo to collect my Cloud Computing knowledge as much as possible.
 - [The Most Important AWS Core Services](https://www.youtube.com/watch?v=B08iQQhXG1Y)
 
 - [My AWS notes](aws.md)
+
+- [Practical Projects to Learn AWS](https://www.youtube.com/watch?v=06VgLTqNvU8)
+
+- [#100DaysOfCloud](https://github.com/100DaysOfCloud/100DaysOfCloudIdeas)
