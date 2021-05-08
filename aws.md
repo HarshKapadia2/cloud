@@ -115,3 +115,17 @@
 <img src="https://user-images.githubusercontent.com/50140864/117202390-60fd0500-ae0b-11eb-807c-409c70c95f38.png" width="50%" />
 
 <img src="https://user-images.githubusercontent.com/50140864/117202589-9efa2900-ae0b-11eb-8fac-f5662e85e012.png" width="50%" />
+
+### Amazon EC2 Load Balancing
+
+- ELB = Elastic Load Balancer
+
+<img src="https://user-images.githubusercontent.com/50140864/117457391-cca7b500-af66-11eb-873a-a93c5d77340c.png" width="50%" />
+<img src="https://user-images.githubusercontent.com/50140864/117457648-0e386000-af67-11eb-8388-c4ca0813fa29.png" width="50%" />
+
+- Advantages of this architechture: High availability, fault tolerance and elasticity.
+- Types of Load Balancers in AWS
+  - Application Load Balancer (Layer 7 Load Balancer)
+  - Network Load Balancer (Layer 4 Load Balancer)
+  - Gateway Load Balancer
+  - Classic Load Balancer (being deprecated)
