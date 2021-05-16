@@ -75,6 +75,7 @@
 
 - EC2 = Elastic Compute Cloud
 - Allows running virtualized servers on AWS.
+- Core service at the center of everything, as it provides the compute power.
 
 <img src="https://user-images.githubusercontent.com/50140864/117099710-82201000-ad8f-11eb-94e0-3bfd283d3ca9.png" width="50%" />
 
@@ -138,3 +139,33 @@
   - Create a [Target Group](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html). (Has the instances to be handled by the ELB.)
   - Create an IAM role.
   - Create an Auto-Scaling Group.
+
+## Amazon Storage Services
+
+- Three types of storage
+  - Amazon EBS: Block storage
+  - Amazon EFS: File storage (Linux only)
+  - Amazon S3: Object storage
+
+<img src="https://user-images.githubusercontent.com/50140864/118397325-0c5e5300-b671-11eb-904a-cbbea1009304.png" width="70%" />
+
+### Amazon EBS
+
+- EBS: Elastic Block Store
+- With EBS, one can attach volumes to EC2 instances.
+- Remember to create the volume and the EC2 instance in the same AZ and subnet. Better perf, I guess?
+
+<img src="https://user-images.githubusercontent.com/50140864/118397454-acb47780-b671-11eb-8252-fe6d2522faa0.png" width="50%" />
+<img src="https://user-images.githubusercontent.com/50140864/118397523-0026c580-b672-11eb-9b52-7e49a15cead4.png" width="60%" />
+
+- IOPS = Input Output Operations Per Second
+- [RDP client](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html#rdp-prereqs)
+
+<img src="https://user-images.githubusercontent.com/50140864/118402018-b1832680-b685-11eb-960a-a6a459fc9a90.png" width="60%" />
+
+#### Amazon EBS Snapshots
+
+- EBS Snapshots are built-in volume backups.
+- Snapshots can be used to back up a volume and to use its data in another AZ in a new volume.
+
+<img src="https://user-images.githubusercontent.com/50140864/118402180-7503fa80-b686-11eb-9986-062e93c7242e.png" width="60%" />
