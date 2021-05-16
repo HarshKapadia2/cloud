@@ -129,3 +129,12 @@
   - Network Load Balancer (Layer 4 Load Balancer)
   - Gateway Load Balancer
   - Classic Load Balancer (being deprecated)
+
+- Steps
+  - Create a VPC.
+  - Create a security policy.
+  - Create an IAM role for S3 (if used).
+  - Create a Launch Template.
+  - Create a [Target Group](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html). (Has the instances to be handled by the ELB.)
+  - Create an IAM role.
+  - Create an Auto-Scaling Group.
