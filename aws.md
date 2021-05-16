@@ -152,13 +152,14 @@
 ### Amazon EBS
 
 - EBS: Elastic Block Store
+- Block based storage, i.e., drives/volumes.
 - With EBS, one can attach volumes to EC2 instances.
 - Remember to create the volume and the EC2 instance in the same AZ and subnet. Better perf, I guess?
 
 <img src="https://user-images.githubusercontent.com/50140864/118397454-acb47780-b671-11eb-8252-fe6d2522faa0.png" width="50%" />
 <img src="https://user-images.githubusercontent.com/50140864/118397523-0026c580-b672-11eb-9b52-7e49a15cead4.png" width="60%" />
 
-- IOPS = Input Output Operations Per Second
+- IOPS: Input Output Operations Per Second
 - [RDP client](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html#rdp-prereqs)
 
 <img src="https://user-images.githubusercontent.com/50140864/118402018-b1832680-b685-11eb-960a-a6a459fc9a90.png" width="60%" />
@@ -169,3 +170,11 @@
 - Snapshots can be used to back up a volume and to use its data in another AZ in a new volume.
 
 <img src="https://user-images.githubusercontent.com/50140864/118402180-7503fa80-b686-11eb-9986-062e93c7242e.png" width="60%" />
+
+### Amazon EFS
+
+- EFS: Elastic File System
+- File based storage system.
+- EFS can only be used with Linux and not with Windows.
+
+<img src="https://user-images.githubusercontent.com/50140864/118404028-e182f780-b68e-11eb-8bdb-6b24ac5b3377.png" width="50%" />
