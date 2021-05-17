@@ -153,7 +153,7 @@
 
 ### Amazon EBS
 
-- EBS: Elastic Block Store
+- EBS = Elastic Block Store
 - Block-based storage, i.e., drives/volumes.
 - With EBS, one can attach volumes to EC2 instances.
 - Remember to create the volume and the EC2 instance in the same AZ and subnet. Better perf, I guess?
@@ -175,7 +175,7 @@
 
 ### Amazon EFS
 
-- EFS: Elastic File System
+- EFS = Elastic File System
 - File-based storage system.
 - EFS can only be used with Linux and not with Windows.
 
@@ -183,9 +183,30 @@
 
 ### Amazon S3
 
-- S3: Simple Storage Service
+- S3 = Simple Storage Service
 - Object-based storage system. (Any file type is accepted, for e.g., spreadsheets, images, videos, etc.)
 - It supports versioning. Deleted files or previous versions of a file can be restored, unless the saved history itself is deleted.
 - Files can be uploaded from the AWS CLI as well.
 
 <img src="https://user-images.githubusercontent.com/50140864/118412773-80bce480-b6b9-11eb-8c99-28f61156edee.png" width="50%" />
+
+## AWS Databases
+
+- Relational (SQL) DB: Amazon RDS
+- Non-relational (NoSQL) DB: Amazon DynamoDB
+
+### Amazon RDS
+
+- RDS = Relational Database Service
+- Managed relational DB service, so it automatically handles a lot of things for the developer, like backups. Scalability, perf gains and multi-AZ fail-over for high availability and disaster recovery are also some features provided. It's difficult to do it all by oneseld.
+- Engines supported
+  - Amazon Aurora
+  - MySQL
+  - MariaDB
+  - Oracle
+  - Microsoft SQL Server
+  - PostgreSQL
+- RDS runs on EC2 instances and the instances can be changed as and when required, at the cost of the DB temporarily going offline.
+
+<img src="https://user-images.githubusercontent.com/50140864/118461519-61ef3a00-b71b-11eb-987d-798ebd0a7de2.png" width="50%" />
+<img src="https://user-images.githubusercontent.com/50140864/118462477-57817000-b71c-11eb-901c-cc870f2cb135.png" width="70%" />
