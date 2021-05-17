@@ -1,5 +1,7 @@
 # AWS
 
+- AWS: Amazon Web Services
+
 ## Global Infrastructure
 
 - There are various regions around the world (around 25) and every region has multiple availability zones (AZs).
@@ -152,7 +154,7 @@
 ### Amazon EBS
 
 - EBS: Elastic Block Store
-- Block based storage, i.e., drives/volumes.
+- Block-based storage, i.e., drives/volumes.
 - With EBS, one can attach volumes to EC2 instances.
 - Remember to create the volume and the EC2 instance in the same AZ and subnet. Better perf, I guess?
 
@@ -174,7 +176,16 @@
 ### Amazon EFS
 
 - EFS: Elastic File System
-- File based storage system.
+- File-based storage system.
 - EFS can only be used with Linux and not with Windows.
 
 <img src="https://user-images.githubusercontent.com/50140864/118404028-e182f780-b68e-11eb-8bdb-6b24ac5b3377.png" width="50%" />
+
+### Amazon S3
+
+- S3: Simple Storage Service
+- Object-based storage system. (Any file type is accepted, for e.g., spreadsheets, images, videos, etc.)
+- It supports versioning. Deleted files or previous versions of a file can be restored, unless the saved history itself is deleted.
+- Files can be uploaded from the AWS CLI as well.
+
+<img src="https://user-images.githubusercontent.com/50140864/118412773-80bce480-b6b9-11eb-8c99-28f61156edee.png" width="50%" />
