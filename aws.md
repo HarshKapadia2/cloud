@@ -198,7 +198,6 @@
 ### Amazon RDS
 
 - RDS = Relational Database Service
-- Managed relational DB service, so it automatically handles a lot of things for the developer, like backups. Scalability, perf gains and multi-AZ fail-over for high availability and disaster recovery are also some features provided. It's difficult to do it all by oneseld.
 - Engines supported
   - Amazon Aurora
   - MySQL
@@ -207,6 +206,21 @@
   - Microsoft SQL Server
   - PostgreSQL
 - RDS runs on EC2 instances and the instances can be changed as and when required, at the cost of the DB temporarily going offline.
+- Managed relational DB service, so it automatically handles a lot of things for the developer, like backups. Scalability, perf gains and multi-AZ fail-over for high availability and disaster recovery are also some features provided. It's difficult to do it all by oneseld.
 
-<img src="https://user-images.githubusercontent.com/50140864/118461519-61ef3a00-b71b-11eb-987d-798ebd0a7de2.png" width="50%" />
-<img src="https://user-images.githubusercontent.com/50140864/118462477-57817000-b71c-11eb-901c-cc870f2cb135.png" width="70%" />
+  <img src="https://user-images.githubusercontent.com/50140864/118461519-61ef3a00-b71b-11eb-987d-798ebd0a7de2.png" width="50%" />
+  <img src="https://user-images.githubusercontent.com/50140864/118462477-57817000-b71c-11eb-901c-cc870f2cb135.png" width="70%" />
+
+### Amazon DynamoDB
+
+- Non-relational (NoSQL) DB.
+
+<img src="https://user-images.githubusercontent.com/50140864/118514079-e0ff6500-b751-11eb-8dc6-550cb6a0277c.png" width="50%" />
+
+- DynamoDB is made up of
+  - Tables
+  - Items (rows)
+  - Attributes (values) (Red box in the picture below.)
+
+  <br />
+  <img src="https://user-images.githubusercontent.com/50140864/118529704-71917180-b761-11eb-8d97-284a204567f1.png" width="50%" />
