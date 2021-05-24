@@ -292,7 +292,7 @@
 ## DNS and Content Delivery
 
 - Amazon Route 53
-- Amazon CloudFront
+- Amazon CloudFront (CDN)
 
 ### Amazon Route 53
 
@@ -304,8 +304,23 @@
 
 - Routing policies
 
-  <img src="https://user-images.githubusercontent.com/50140864/119391596-2a205d80-bcec-11eb-8f46-80c8f34126d3.png" width="50%" />
+  <img src="https://user-images.githubusercontent.com/50140864/119406755-db30f300-bd00-11eb-8359-5b5471358d0e.png" width="50%" />
 
 - Record types
+  - Alias record (not mentioned in pic below)
+    - Alias records let's one route traffic to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets.
+    - They also let one route traffic from one record in a hosted zone to another record.
 
   <img src="https://user-images.githubusercontent.com/50140864/119406111-ef282500-bcff-11eb-9789-882a8d2a4587.png" />
+
+- Use `dig` (Linux) or `nslookup` (Windows) from the command line to check whether the site is working fine.
+  - 'NX' implies non-existant domain.
+
+### Amazon CloudFront
+
+- Global CDN
+- Consists of CloudFront Origin location and edge locations.
+
+<img src="https://user-images.githubusercontent.com/50140864/119407213-8e99e780-bd01-11eb-9e56-7b9a149b9441.png" width="60%" />
+
+- Be in the North Virginia section while adding a TLS certificate.
