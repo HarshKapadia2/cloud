@@ -288,3 +288,24 @@
 - It can delete all resources on deleting the project.
 
 <img src="https://user-images.githubusercontent.com/50140864/119379921-aeb7af80-bcdd-11eb-86ee-802885219622.png" width="50%" />
+
+## DNS and Content Delivery
+
+- Amazon Route 53
+- Amazon CloudFront
+
+### Amazon Route 53
+
+- The DNS protocol uses port 53 on devices and thus the '53' in the name of the service.
+
+<img src="https://user-images.githubusercontent.com/50140864/119390896-4cfe4200-bceb-11eb-8d16-e25b7ddb64f2.png" width="50%" />
+<img src="https://user-images.githubusercontent.com/50140864/119391190-acf4e880-bceb-11eb-951d-42bab2a2adb7.png" width="60%" />
+<img src="https://user-images.githubusercontent.com/50140864/119391438-f9d8bf00-bceb-11eb-963a-d2afc1e82bdb.png" width="60%" />
+
+- Routing policies
+
+  <img src="https://user-images.githubusercontent.com/50140864/119391596-2a205d80-bcec-11eb-8f46-80c8f34126d3.png" width="50%" />
+
+- Record types
+
+  <img src="https://user-images.githubusercontent.com/50140864/119406111-ef282500-bcff-11eb-9789-882a8d2a4587.png" />
