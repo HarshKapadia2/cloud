@@ -324,3 +324,18 @@
 <img src="https://user-images.githubusercontent.com/50140864/119407213-8e99e780-bd01-11eb-9e56-7b9a149b9441.png" width="60%" />
 
 - Be in the North Virginia section while adding a TLS certificate.
+
+## Containers and Serverless Computing
+
+- Amazon ECS
+- AWS Lambda
+
+### Amazon ECS
+
+- ECS = Elastic Container Service
+- AWS service to run Docker containers
+
+<img src="https://user-images.githubusercontent.com/50140864/119413692-c1e17400-bd0b-11eb-8fbc-329ac9cca462.png" width="60%" />
+
+- It uses Fargate to manage the underlying infra.
+- Uses Amazon CloudFormation to delete all resources.
