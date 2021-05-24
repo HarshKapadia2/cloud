@@ -55,13 +55,13 @@
 - Default no. of subnets = no. of AZs in a region
 - Tenancy is multi-tenancy (default/shared) and the pricing is more for a dedicated space.
 - VPC -> subnets -> route tables -> internet gateway (if public facing)
-- Security group affects instances of resources (eg: Amazon EC2) in the subnet and NACLs (Network Access Control Lists) affect the entire subnet. Both are responsible for allowing or disallowing certain network traffic based on rules.
+- **Security group** affects instances of resources (eg: Amazon EC2) in the subnet and **NACLs (Network Access Control Lists)** affect the entire subnet. Both are responsible for allowing or disallowing certain network traffic based on rules.
   - So instance to instance talking within a subnet will be governed by a security group, but not by a NACL. NACL is only concerned with subnet to subnet or subnet to public communication.
 
   <br />
   <img src="https://user-images.githubusercontent.com/50140864/117050117-9e419400-ad32-11eb-81b2-23ddc9a33157.png" width="60%" />
 
-- Security groups are stateful firewalls while NACLs are stateless firewalls.
+- **Security groups** are stateful firewalls while **NACLs** are stateless firewalls.
   - Stateful firewalls send outbound traffic implicitly if the inbound for those IPs is allowed by a rule. A stateless firewall would require an explicit rule for the outbound communication even if the inbound connection was allowed by a rule.
 
   <br />
@@ -142,6 +142,9 @@
   - Create an IAM role.
   - Create an Auto-Scaling Group.
 
+- What can be done is that the security group (SG) for the EC2 instance can only allow inbound traffic from the SG of the ELB. The SG of the ELB can then be allowed to be contacted by anyone on the internet for public access.
+  - In such a scenario, if the link to the final app does not work (no error, but just doesn't load completely), check the ELB SG and check if it allows HTTP or HTTPS traffic from everywhere (public, i.e., 0.0.0.0/0 or ::/0).
+
 ## Amazon Storage Services
 
 - Three types of storage
@@ -186,6 +189,8 @@
 - S3 = Simple Storage Service
 - Object-based storage system. (Any file type is accepted, for e.g., spreadsheets, images, videos, etc.)
 - It supports versioning. Deleted files or previous versions of a file can be restored, unless the saved history itself is deleted.
+- The bucket needs to be empty (with) before it can be deleted.
+- Public access needs to be defined at bucket level and individual object levels as well.
 - Files can be uploaded from the AWS CLI as well.
 
 <img src="https://user-images.githubusercontent.com/50140864/118412773-80bce480-b6b9-11eb-8c99-28f61156edee.png" width="50%" />
@@ -224,3 +229,25 @@
 
   <br />
   <img src="https://user-images.githubusercontent.com/50140864/118529704-71917180-b761-11eb-8d97-284a204567f1.png" width="50%" />
+
+## Automation on AWS
+
+- AWS CloudFormation
+- AWS Elastic Beanstalk (PaaS)
+
+### AWS CloudFormation
+
+- Helps deploying intrastructure (infra) as code.
+- Enables automatic infrastructure deployment on AWS through code in template files in JSON or YAML (YML) formats.
+- Anything from deploying VPCs, subnet configs, DBs, etc on AWS.
+- Code view 👇
+
+  <img src="https://user-images.githubusercontent.com/50140864/119312038-74272600-bc8f-11eb-8d2b-7ce4c496a5cb.png" width="50%" />
+
+- Graphic view of the code provided by AWS CloudFormation Designer 👇
+
+  <img src="https://user-images.githubusercontent.com/50140864/119312240-bc464880-bc8f-11eb-9bfa-d86e2f1fb21c.png" width="50%" />
+
+- Create stacks and upload templates.
+- On deleteing a stack, it rolls back the deployed infra.
+  - Even then, make sure to check that all resources are deleted, because certain modifications to the infra might lead to some infra not being rolled back (stopped).
