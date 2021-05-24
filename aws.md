@@ -251,3 +251,10 @@
 - Create stacks and upload templates.
 - On deleteing a stack, it rolls back the deployed infra.
   - Even then, make sure to check that all resources are deleted, because certain modifications to the infra might lead to some infra not being rolled back (stopped).
+
+### AWS Elastic Beanstalk (EB)
+
+- PaaS
+- Only code needs to be uploaded, everything else (infra and config) is managed by EB.
+
+<img src="https://user-images.githubusercontent.com/50140864/119347089-a7ca7600-bcb8-11eb-9187-13725e3f43bb.png" width="60%" />
