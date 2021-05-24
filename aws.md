@@ -258,3 +258,33 @@
 - Only code needs to be uploaded, everything else (infra and config) is managed by EB.
 
 <img src="https://user-images.githubusercontent.com/50140864/119347089-a7ca7600-bcb8-11eb-9187-13725e3f43bb.png" width="60%" />
+
+## DevOps on AWS
+
+### AWS Developer Tools
+
+- AWS CodeCommit
+  - Provides repositories
+
+- AWS CodeArtifact
+
+- AWS CodeBuild
+  - For building out the application and testing it.
+
+- AWS CodeDeploy
+  - To deploy the application code on various AWS services.
+
+- AWS CodePipeline
+  - Combines the above tools to create a CI/CD pipeline.
+  - Eg: Source -> Build -> Deploy
+
+<img src="https://user-images.githubusercontent.com/50140864/119350915-8324cd00-bcbd-11eb-9f98-f0e3c4ec907c.png" width="60%" />
+<img src="https://user-images.githubusercontent.com/50140864/119351313-f9c1ca80-bcbd-11eb-890f-98b5f05ba268.png" width="50%" />
+
+### AWS CodeStar
+
+- It creates a project and uses AWS Developer Tools to build out an environment.
+- It uses AWS CloudFormation to build out the infra.
+- It can delete all resources on deleting the project.
+
+<img src="https://user-images.githubusercontent.com/50140864/119379921-aeb7af80-bcdd-11eb-86ee-802885219622.png" width="50%" />
