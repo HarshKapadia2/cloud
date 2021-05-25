@@ -53,7 +53,7 @@
 
 - [AWS pricing](https://aws.amazon.com/pricing/)
 - [AWS pricing calculator](https://calculator.aws/)
-- Billing alarm uses Amazon CloudWatch and Amazon SNS.
+- Billing alarm uses Amazon CloudWatch and [Amazon SNS](#amazon-sns).
 
 ## AWS IAM
 
@@ -145,7 +145,7 @@
 ### Connecting different AWS services to each other
 
 - Key pairs (access keys)
-- IAM roles
+- [IAM](#aws-iam) roles
 
   <img src="https://user-images.githubusercontent.com/50140864/117161923-f4b8dc00-addf-11eb-81eb-8ac9ea6e7c18.png" width="50%" />
 
@@ -176,11 +176,11 @@
 - Steps
   - Create a VPC.
   - Create a security policy.
-  - Create an IAM role for S3 (if used).
+  - Create an [IAM](#aws-iam) role for S3 (if used).
   - Create a Launch Template.
   - Create a [Target Group](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html). (Has the instances to be handled by the ELB.)
-  - Create an IAM role.
-  - Create an Auto-Scaling Group.
+  - Create an [IAM](#aws-iam).
+  - Create an [Auto-Scaling Group](#amazon-ec2-auto-scaling).
 
 - What can be done is that the security group (SG) for the EC2 instance can only allow inbound traffic from the SG of the ELB. The SG of the ELB can then be allowed to be contacted by anyone on the internet for public access.
   - In such a scenario, if the link to the final app does not work (no error, but just doesn't load completely), check the ELB SG and check if it allows HTTP or HTTPS traffic from everywhere (public, i.e., 0.0.0.0/0 or ::/0).
@@ -188,9 +188,9 @@
 ## Amazon Storage Services
 
 - Three types of storage
-  - Amazon EBS: Block storage
-  - Amazon EFS: File storage (Linux only)
-  - Amazon S3: Object storage
+  - [Amazon EBS](#amazon-ebs): Block storage
+  - [Amazon EFS](#amazon-efs): File storage (Linux only)
+  - [Amazon S3](#amazon-s3): Object storage
 
 <img src="https://user-images.githubusercontent.com/50140864/118397325-0c5e5300-b671-11eb-904a-cbbea1009304.png" width="70%" />
 
@@ -198,8 +198,8 @@
 
 - EBS = Elastic Block Store
 - Block-based storage, i.e., drives/volumes.
-- With EBS, one can attach volumes to EC2 instances.
-- Remember to create the volume and the EC2 instance in the same AZ and subnet. Better perf, I guess?
+- With EBS, one can attach volumes to [EC2](#amazon-ec2) instances.
+- Remember to create the volume and the [EC2](#amazon-ec2) instance in the same AZ and subnet. Better perf, I guess?
 
 <img src="https://user-images.githubusercontent.com/50140864/118397454-acb47780-b671-11eb-8252-fe6d2522faa0.png" width="50%" />
 <img src="https://user-images.githubusercontent.com/50140864/118397523-0026c580-b672-11eb-9b52-7e49a15cead4.png" width="60%" />
@@ -237,8 +237,8 @@
 
 ## AWS Databases
 
-- Relational (SQL) DB: Amazon RDS
-- Non-relational (NoSQL) DB: Amazon DynamoDB
+- Relational (SQL) DB: [Amazon RDS](#amazon-rds)
+- Non-relational (NoSQL) DB: [Amazon DynamoDB](#amazon-dynamodb)
 
 ### Amazon RDS
 
@@ -250,7 +250,7 @@
   - Oracle
   - Microsoft SQL Server
   - PostgreSQL
-- RDS runs on EC2 instances and the instances can be changed as and when required, at the cost of the DB temporarily going offline.
+- RDS runs on [EC2](#amazon-ec2) instances and the instances can be changed as and when required, at the cost of the DB temporarily going offline.
 - Managed relational DB service, so it automatically handles a lot of things for the developer, like backups. Scalability, perf gains and multi-AZ fail-over for high availability and disaster recovery are also some features provided. It's difficult to do it all by oneseld.
 
   <img src="https://user-images.githubusercontent.com/50140864/118461519-61ef3a00-b71b-11eb-987d-798ebd0a7de2.png" width="50%" />
@@ -272,8 +272,8 @@
 
 ## Automation on AWS
 
-- AWS CloudFormation
-- AWS Elastic Beanstalk (PaaS)
+- [AWS CloudFormation](#aws-cloudformation)
+- [AWS Elastic Beanstalk](#aws-elastic-beanstalk-eb) (PaaS)
 
 ### AWS CloudFormation
 
@@ -324,19 +324,19 @@
 ### AWS CodeStar
 
 - It creates a project and uses AWS Developer Tools to build out an environment.
-- It uses AWS CloudFormation to build out the infra.
+- It uses [AWS CloudFormation](#aws-cloudformation) to build out the infra.
 - It can delete all resources on deleting the project.
 
 <img src="https://user-images.githubusercontent.com/50140864/119379921-aeb7af80-bcdd-11eb-86ee-802885219622.png" width="50%" />
 
 ## DNS and Content Delivery
 
-- Amazon Route 53
-- Amazon CloudFront (CDN)
+- [Amazon Route 53](#amazon-route-53)
+- [Amazon CloudFront](#amazon-cloudfront) (CDN)
 
 ### Amazon Route 53
 
-- The DNS protocol uses port 53 on devices and thus the '53' in the name of the service.
+- The [DNS protocol uses port 53 on devices](https://github.com/HarshKapadia2/networking/blob/main/protocols.md#:~:text=DNS) and thus the '53' in the name of the service.
 
 <img src="https://user-images.githubusercontent.com/50140864/119390896-4cfe4200-bceb-11eb-8d16-e25b7ddb64f2.png" width="50%" />
 <img src="https://user-images.githubusercontent.com/50140864/119391190-acf4e880-bceb-11eb-951d-42bab2a2adb7.png" width="60%" />
@@ -348,11 +348,12 @@
 
 - Record types
   - Alias record (not mentioned in pic below)
-    - Alias records let's one route traffic to selected AWS resources, such as CloudFront distributions and Amazon S3 buckets.
+    - Alias records let's one route traffic to selected AWS resources, such as [CloudFront distributions](#amazon-cloudfront) and [Amazon S3 buckets](#amazon-s3).
     - They also let one route traffic from one record in a hosted zone to another record.
 
   <img src="https://user-images.githubusercontent.com/50140864/119406111-ef282500-bcff-11eb-9789-882a8d2a4587.png" />
 
+- Before taking domain from Route 53, create a S3 bucket with the exact domain name. The same bucket name needs to be available.
 - Use `dig` (Linux) or `nslookup` (Windows) from the command line to check whether the site is working fine.
   - 'NX' implies non-existant domain.
 
@@ -367,8 +368,8 @@
 
 ## Containers and Serverless Computing
 
-- Amazon ECS
-- AWS Lambda
+- [Amazon ECS](#amazon-ecs)
+- [AWS Lambda](#aws-lambda)
 
 ### Amazon ECS
 
@@ -378,7 +379,7 @@
 <img src="https://user-images.githubusercontent.com/50140864/119413692-c1e17400-bd0b-11eb-8fbc-329ac9cca462.png" width="60%" />
 
 - It uses Fargate to manage the underlying infra.
-- Uses Amazon CloudFormation to delete all resources.
+- Uses [AWS CloudFormation](#aws-cloudformation) to delete all resources.
 
 ### AWS Lambda
 
@@ -395,8 +396,8 @@
 ## Application integration and loose coupling
 
 - Add something in between services for them to be able to communicate without being tightly coupled.
-- Amazon SQS
-- Amazon SNS
+- [Amazon SQS](#amazon-sqs)
+- [Amazon SNS](#amazon-sns)
 
 ### Amazon SNS
 
