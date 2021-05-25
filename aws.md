@@ -2,6 +2,46 @@
 
 - AWS: Amazon Web Services
 
+## Table of Contents
+
+- [Global Infrastructure](#global-infrastructure)
+- [AWS Pricing](#aws-pricing)
+- [AWS IAM](#aws-iam)
+- [Amazon VPC](#amazon-vpc)
+- [Amazon EC2](#amazon-ec2)
+  - [Connecting different AWS services to each other](#connecting-different-aws-services-to-each-other)
+  - [Amazon EC2 Auto Scaling](#amazon-ec2-auto-scaling)
+  - [Amazon EC2 Load Balancing](#amazon-ec2-load-balancing)
+- [Amazon Storage Services](#amazon-storage-services)
+  - [Amazon EBS](#amazon-ebs)
+    - [Amazon EBS Snapshots](#amazon-ebs-snapshots)
+  - [Amazon EFS](#amazon-efs)
+  - [Amazon S3](#amazon-s3)
+- [AWS Databases](#aws-databases)
+  - [Amazon RDS](#amazon-rds)
+  - [Amazon DynamoDB](#amazon-dynamodb)
+- [Automation on AWS](#automation-on-aws)
+  - [AWS CloudFormation](#aws-cloudformation)
+  - [AWS Elastic Beanstalk](#aws-elastic-beanstalk-eb)
+- [DevOps on AWS](#devops-on-aws)
+  - [AWS Deveoper Tools](#aws-developer-tools)
+    - AWS CodeCommit
+    - AWS CodeArtifact
+    - AWS CodeBuild
+    - AWS CodeDeploy
+    - AWS CodePipeline
+  - [AWS CodeStar](#aws-codestar)
+- [DNS and Content Delivery](#dns-and-content-delivery)
+  - [Amazon Route 53](#amazon-route-53)
+  - [Amazon CloudFront](#amazon-cloudfront)
+- [Containers and Serverless Computing](#containers-and-serverless-computing)
+  - [Amazon ECS](#amazon-ecs)
+  - [AWS Lambda](#aws-lambda)
+- [Application integration and loose coupling](#application-integration-and-loose-coupling)
+  - [Amazon SNS](#amazon-sns)
+  - [Amazon SQS](amazon-sqs)
+  - [SNS and SQS example](#sns-and-sqs-example)
+
 ## Global Infrastructure
 
 - There are various regions around the world (around 25) and every region has multiple availability zones (AZs).
@@ -352,7 +392,7 @@
 
 - It supports concurrent execution
 
-## Application integration anf loose coupling
+## Application integration and loose coupling
 
 - Add something in between services for them to be able to communicate without being tightly coupled.
 - Amazon SQS
