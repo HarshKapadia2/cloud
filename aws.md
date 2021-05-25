@@ -339,3 +339,13 @@
 
 - It uses Fargate to manage the underlying infra.
 - Uses Amazon CloudFormation to delete all resources.
+
+### AWS Lambda
+
+- Serverless service.
+- Event driven service.
+- Suffers from cold starts.
+- No payment for code until Lambda executes it in response to some event.
+- Payment is for amount of execution time and amount of memory used.
+
+<img src="https://user-images.githubusercontent.com/50140864/119442320-3b498880-bd45-11eb-94d2-2b3a02e1ef42.png" width="50%">
