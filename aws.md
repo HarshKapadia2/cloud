@@ -342,10 +342,12 @@
 
 ### AWS Lambda
 
-- Serverless service.
+- Serverless service. Just put in code and everything related to infra (scaling up and down, etc) is managed by AWS automatically.
 - Event driven service.
 - Suffers from cold starts.
 - No payment for code until Lambda executes it in response to some event.
 - Payment is for amount of execution time and amount of memory used.
 
 <img src="https://user-images.githubusercontent.com/50140864/119442320-3b498880-bd45-11eb-94d2-2b3a02e1ef42.png" width="50%">
+
+- It supports concurrent execution
