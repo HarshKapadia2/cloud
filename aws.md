@@ -351,3 +351,32 @@
 <img src="https://user-images.githubusercontent.com/50140864/119442320-3b498880-bd45-11eb-94d2-2b3a02e1ef42.png" width="50%">
 
 - It supports concurrent execution
+
+## Application integration anf loose coupling
+
+- Add something in between services for them to be able to communicate without being tightly coupled.
+- Amazon SQS
+- Amazon SNS
+
+### Amazon SNS
+
+- SNS = Simple Notification Service
+- Pub/Sub model
+
+<img src="https://user-images.githubusercontent.com/50140864/119523504-6f9b6400-bd9a-11eb-98b0-28dfe69f3643.png" width="50%" />
+
+### Amazon SQS
+
+- SQS = Simple Queue Service
+
+<img src="https://user-images.githubusercontent.com/50140864/119523883-c3a64880-bd9a-11eb-9b29-039786fd2150.png" width="50%" />
+
+### SNS and SQS example
+
+- Part 1/2
+
+  <img src="https://user-images.githubusercontent.com/50140864/119530090-4ed60d00-bda0-11eb-95bb-b710a155ea40.png" width="50%" />
+
+- Part 2/2
+
+  <img src="https://user-images.githubusercontent.com/50140864/119530276-7d53e800-bda0-11eb-85be-cce7c1b68b2a.png" width="50%" />
