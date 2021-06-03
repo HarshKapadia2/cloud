@@ -336,7 +336,7 @@
 
 ### Amazon Route 53
 
-- The [DNS protocol uses port 53 on devices](https://github.com/HarshKapadia2/networking/blob/main/protocols.md#:~:text=DNS) and thus the '53' in the name of the service.
+- The [DNS protocol uses port 53 on devices](https://harshkapadia2.github.io/networking/protocols.html#:~:text=DNS) and thus the '53' in the name of the service.
 
 <img src="https://user-images.githubusercontent.com/50140864/119390896-4cfe4200-bceb-11eb-8d16-e25b7ddb64f2.png" width="50%" />
 <img src="https://user-images.githubusercontent.com/50140864/119391190-acf4e880-bceb-11eb-951d-42bab2a2adb7.png" width="60%" />
