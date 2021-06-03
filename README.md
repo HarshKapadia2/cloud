@@ -1,4 +1,4 @@
-# cloud-computing
+# cloud
 
 A repo to collect my Cloud Computing knowledge as much as possible.
 
