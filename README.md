@@ -8,8 +8,8 @@ A repo to collect my Cloud Computing knowledge as much as possible.
 
 - Prerequisites
   - OS
-  - [Networking](https://github.com/HarshKapadia2/networking)
-  - [Linux basics + shell scripting](https://github.com/HarshKapadia2/cli)
+  - [Networking](https://harshkapadia2.github.io/networking/)
+  - [Linux basics + shell scripting](https://harshkapadia2.github.io/cli/)
   - Virtualization and hypervisors
     - [Containers and Virtualization in Cloud Computing](https://www.youtube.com/watch?v=GOuVeZmMee0)
     - [Virtualization Explained](https://www.youtube.com/watch?v=FZR0rG3HKIk) (with type 1/native/bare metal and type 2/hosted Hypervisors)
